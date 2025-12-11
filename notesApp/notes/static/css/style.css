@@ -1,0 +1,136 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #0e1b2c;
+    background-size: cover;
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 10px;
+    margin-right: 40px;
+}
+
+/* Frosted Navigation Bar */
+.nav-glass {
+    position: sticky;
+    top: 0;
+    width: 97%;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Neon Button */
+.btn-neon {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 2px solid #00e5ff;
+    color: #00e5ff;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.25s;
+    text-decoration: none;
+}
+
+.btn-neon:hover {
+    background: #00e5ff;
+    color: #00121f;
+    box-shadow: 0 0 12px #00e5ff, 0 0 25px #00e5ff;
+}
+
+.logout {
+    border-color: #ff7b7b;
+    color: #ff7b7b;
+}
+
+.logout:hover {
+    background: #ff7b7b;
+    color: #00121f;
+    box-shadow: 0 0 12px #ff7b7b, 0 0 25px #ff7b7b;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+/* Frosted Card */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 22px;
+
+    box-shadow: 0 0 30px rgba(0, 225, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+
+    backdrop-filter: blur(6px);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle Animations */
+.card:hover {
+    border-color: #00e5ff;
+    box-shadow: 0 0 20px rgba(0, 225, 255, 0.1);
+    transition: 0.3s;
+}
+
+.btn-link {
+    color: #00e5ff;
+    /* Neon cyan like your buttons */
+    text-decoration: none;
+    /* Remove underline */
+    transition: 0.3s;
+    /* Smooth hover */
+}

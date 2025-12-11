@@ -1,0 +1,20 @@
+{% extends 'main.html' %} 
+{% block content %}
+<a class="btn-neon" href="{% url 'add_note' %}" role="button">+ Add Note </a>
+<br /><br />
+<h1>MyNotes</h1>
+<hr>
+
+{% for note in notes %}
+  <div class="card">
+    <h3>{{note.title}}</h3>
+    <p>{{note.content}}</p>
+    <small>{{ note.created_at }}</small><br><br>
+    <a class ="btn-neon" href="{% url 'edit_note' note.id %}">Edit</a>
+    <a class ="btn-neon" href="{% url 'delete_note' note.id %}">Delete</a>
+    <br><br>
+    <hr>
+  </div>
+{% empty %}
+  <p>No notes yet!</p>
+{% endfor %} {% endblock content %}
