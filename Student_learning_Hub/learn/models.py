@@ -45,8 +45,8 @@ class LearningResource(models.Model):
     
 
 class LearningPath(models.Model):
-    name = models.CharField( max_length=50)
-    description= models.TextField()
+    name = models.CharField( max_length=50)  # name of path (backend Development)
+    description= models.TextField()  #description for path
     owner = models.ForeignKey(User, on_delete=models.CASCADE)   #import user
     #timestamp
     created_at = models.DateTimeField(auto_now_add=True)  # set once when created
@@ -58,9 +58,9 @@ class LearningPath(models.Model):
 
     
 class LearningPathItem(models.Model):
-    path = models.ForeignKey("LearningPath",on_delete=models.CASCADE)
-    resource = models.ForeignKey("LearningResource", on_delete=models.CASCADE)
-    order = models.IntegerField()
+    path = models.ForeignKey("LearningPath",on_delete=models.CASCADE)       # name of path to add resource
+    resource = models.ForeignKey("LearningResource", on_delete=models.CASCADE)  # resouce to add in the path 
+    order = models.IntegerField()       #order in which resouce are added
     class Meta:
         unique_together = ('path', 'resource') 
     
