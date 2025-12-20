@@ -1,16 +1,31 @@
 from django.shortcuts import render
-from django.http import  HttpResponse
-
+from .models import LearningResource, LearningPath, LearningPathItem
 
 def home(request):
     return render(request, "home.html")
   
 def path_list(request):
-    pass
+    paths= LearningPath.objects.all().order_by("name")
+    content={
+        "paths" : paths
+    }
+    return render(request,"path_list.html", content)
+    
 def resources(request):
-    pass
+    resources = LearningResource.objects.all()
+    content={
+        "resources" : resources
+    }
+    return render(request,"resources.html", content)
+    
 def path_detail (request, id):
-    pass  
+    path = LearningPath.objects.get(id=id )
+    items = LearningPathItem.objects.filter(path = path).order_by("order")
+    content={
+        "path":path,
+        "items":items
+    }
+    return render(request,"path_detail.html", content) 
 
 def dashboard(request):
     return render(request, "dashboard.html")

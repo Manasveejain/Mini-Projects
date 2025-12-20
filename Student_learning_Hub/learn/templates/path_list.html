@@ -1,0 +1,12 @@
+{% block content %}
+<h1>Welcome to path_list Hub</h1>
+
+{% for item in paths %} 
+{{item.name}} <br>
+{{item.description}} <br>
+<a href="{% url 'path-id' item.id %}">Details</a>
+<br>
+<hr>
+{% endfor %} 
+
+{% endblock content %}

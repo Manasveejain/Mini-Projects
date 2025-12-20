@@ -1,0 +1,13 @@
+{% block content %}
+<h1>Welcome to resources Hub</h1>
+
+{% for item in resources %} 
+Title: {{item.title}} <br>
+Platfrom: {{item.platform}} <br>
+Type: {{item.resource_type}} <br>
+Status: {{item.status}} <br>
+Progress: {{item.progress}} <br>
+<hr>
+{% endfor %} 
+
+{% endblock content %}

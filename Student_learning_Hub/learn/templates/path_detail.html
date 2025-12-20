@@ -1,0 +1,14 @@
+{% block content %}
+<h1>Welcome to path_details</h1>
+<h1>{{path.name}}</h1>
+<p> {{path.description}}</p>
+{% for item in items %} 
+Order: {{item.order}} <br>
+Title : {{item.resource.title}} <br>
+Platfrom: {{item.resource.platform}} <br>
+Type: {{item.resource.resource_type}} <br>
+Progress: {{item.resource.progress}} <br>
+<hr>
+{% endfor %} 
+
+{% endblock content %}
